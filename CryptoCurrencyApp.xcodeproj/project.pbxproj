@@ -56,15 +56,39 @@
 		C8D6F3E62A06F4C800164C57 /* CryptoCurrencyApp */ = {
 			isa = PBXGroup;
 			children = (
-				C8D6F3E72A06F4C800164C57 /* AppDelegate.swift */,
-				C8D6F3E92A06F4C800164C57 /* SceneDelegate.swift */,
-				C8D6F3EB2A06F4C800164C57 /* ViewController.swift */,
-				C8D6F3ED2A06F4C800164C57 /* Main.storyboard */,
+				C8D6F3FB2A06F4D300164C57 /* App */,
+				C8D6F3FC2A06F4D900164C57 /* ViewControllers */,
+				C8D6F3FD2A06F4E000164C57 /* Storyboards */,
 				C8D6F3F02A06F4C900164C57 /* Assets.xcassets */,
-				C8D6F3F22A06F4C900164C57 /* LaunchScreen.storyboard */,
-				C8D6F3F52A06F4C900164C57 /* Info.plist */,
 			);
 			path = CryptoCurrencyApp;
+			sourceTree = "<group>";
+		};
+		C8D6F3FB2A06F4D300164C57 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C8D6F3E72A06F4C800164C57 /* AppDelegate.swift */,
+				C8D6F3E92A06F4C800164C57 /* SceneDelegate.swift */,
+				C8D6F3F52A06F4C900164C57 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C8D6F3FC2A06F4D900164C57 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C8D6F3EB2A06F4C800164C57 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C8D6F3FD2A06F4E000164C57 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C8D6F3ED2A06F4C800164C57 /* Main.storyboard */,
+				C8D6F3F22A06F4C900164C57 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,8 +317,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +326,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Denis-Kitaev.CryptoCurrencyApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -321,8 +348,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +357,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Denis-Kitaev.CryptoCurrencyApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
