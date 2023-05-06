@@ -11,25 +11,22 @@ class CurrenciesListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchCurrency()
     }
 
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    private func fetchCurrency() {
+        let url = URL(string: "https://api.coinstats.app/public/v1/coins")!
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data else {
+                print(error?.localizedDescription ?? "No Localised description")
+                return
+            }
+            do {
+                let decoder = JSONDecoder()
+                let cryptoCurrency = try decoder.decode([CryptoCurrency].self, from: data)
+            } catch {
+                print(error)
+            }
+        }.resume()
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-
 }
