@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Coins: Decodable {
+struct CoinList: Decodable {
     let coins: [CryptoCurrency]
 }
 
