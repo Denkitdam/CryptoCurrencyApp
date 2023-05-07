@@ -23,7 +23,8 @@ class CurrenciesListViewController: UITableViewController {
             }
             do {
                 let decoder = JSONDecoder()
-                let cryptoCurrency = try decoder.decode([CryptoCurrency].self, from: data)
+                let cryptoCurrencies = try decoder.decode(Coins.self, from: data)
+                print(cryptoCurrencies)
             } catch {
                 print(error)
             }
