@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CoinDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

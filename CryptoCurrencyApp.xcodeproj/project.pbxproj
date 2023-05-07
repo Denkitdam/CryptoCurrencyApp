@@ -9,25 +9,25 @@
 /* Begin PBXBuildFile section */
 		C8D6F3E82A06F4C800164C57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D6F3E72A06F4C800164C57 /* AppDelegate.swift */; };
 		C8D6F3EA2A06F4C800164C57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D6F3E92A06F4C800164C57 /* SceneDelegate.swift */; };
-		C8D6F3EC2A06F4C800164C57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D6F3EB2A06F4C800164C57 /* ViewController.swift */; };
+		C8D6F3EC2A06F4C800164C57 /* CoinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D6F3EB2A06F4C800164C57 /* CoinDetailViewController.swift */; };
 		C8D6F3EF2A06F4C800164C57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D6F3ED2A06F4C800164C57 /* Main.storyboard */; };
 		C8D6F3F12A06F4C900164C57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D6F3F02A06F4C900164C57 /* Assets.xcassets */; };
 		C8D6F3F42A06F4C900164C57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D6F3F22A06F4C900164C57 /* LaunchScreen.storyboard */; };
-		C8D6F3FF2A06F52E00164C57 /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D6F3FE2A06F52E00164C57 /* CryptoCurrency.swift */; };
-		C8D6F4022A06F72C00164C57 /* CurrenciesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D6F4012A06F72C00164C57 /* CurrenciesListViewController.swift */; };
+		C8D6F3FF2A06F52E00164C57 /* CoinList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D6F3FE2A06F52E00164C57 /* CoinList.swift */; };
+		C8D6F4022A06F72C00164C57 /* CoinsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D6F4012A06F72C00164C57 /* CoinsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C8D6F3E42A06F4C800164C57 /* CryptoCurrencyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCurrencyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8D6F3E72A06F4C800164C57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8D6F3E92A06F4C800164C57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C8D6F3EB2A06F4C800164C57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C8D6F3EB2A06F4C800164C57 /* CoinDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailViewController.swift; sourceTree = "<group>"; };
 		C8D6F3EE2A06F4C800164C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8D6F3F02A06F4C900164C57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8D6F3F32A06F4C900164C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8D6F3F52A06F4C900164C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8D6F3FE2A06F52E00164C57 /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
-		C8D6F4012A06F72C00164C57 /* CurrenciesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesListViewController.swift; sourceTree = "<group>"; };
+		C8D6F3FE2A06F52E00164C57 /* CoinList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinList.swift; sourceTree = "<group>"; };
+		C8D6F4012A06F72C00164C57 /* CoinsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +82,8 @@
 		C8D6F3FC2A06F4D900164C57 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C8D6F3EB2A06F4C800164C57 /* ViewController.swift */,
-				C8D6F4012A06F72C00164C57 /* CurrenciesListViewController.swift */,
+				C8D6F3EB2A06F4C800164C57 /* CoinDetailViewController.swift */,
+				C8D6F4012A06F72C00164C57 /* CoinsListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -100,7 +100,7 @@
 		C8D6F4002A06F6EC00164C57 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C8D6F3FE2A06F52E00164C57 /* CryptoCurrency.swift */,
+				C8D6F3FE2A06F52E00164C57 /* CoinList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,11 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8D6F4022A06F72C00164C57 /* CurrenciesListViewController.swift in Sources */,
-				C8D6F3EC2A06F4C800164C57 /* ViewController.swift in Sources */,
+				C8D6F4022A06F72C00164C57 /* CoinsListViewController.swift in Sources */,
+				C8D6F3EC2A06F4C800164C57 /* CoinDetailViewController.swift in Sources */,
 				C8D6F3E82A06F4C800164C57 /* AppDelegate.swift in Sources */,
 				C8D6F3EA2A06F4C800164C57 /* SceneDelegate.swift in Sources */,
-				C8D6F3FF2A06F52E00164C57 /* CryptoCurrency.swift in Sources */,
+				C8D6F3FF2A06F52E00164C57 /* CoinList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

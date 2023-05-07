@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CurrenciesListViewController: UITableViewController {
+class CoinsListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
