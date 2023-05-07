@@ -329,7 +329,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ML94J3D5JQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CryptoCurrencyApp/Info.plist;
+				INFOPLIST_FILE = CryptoCurrencyApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -360,7 +360,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ML94J3D5JQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CryptoCurrencyApp/Info.plist;
+				INFOPLIST_FILE = CryptoCurrencyApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
