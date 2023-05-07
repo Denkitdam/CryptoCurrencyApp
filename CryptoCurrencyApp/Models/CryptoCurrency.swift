@@ -7,12 +7,16 @@
 
 import Foundation
 
+struct Coins: Decodable {
+    let coins: [CryptoCurrency]
+}
+
 struct CryptoCurrency: Decodable {
     let id: String
     let icon: URL
     let name: String
     let symbol: String
-    let rank: String
+    let rank: Double
     let price: Double
     let priceBtc: Double
     let volume: Double
