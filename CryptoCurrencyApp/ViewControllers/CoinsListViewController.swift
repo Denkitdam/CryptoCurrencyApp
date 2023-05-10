@@ -22,6 +22,9 @@ final class CoinsListViewController: UITableViewController {
             switch result {
             case .success(let coinList):
                 self?.coins = coinList
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
             case .failure(let error):
                 print(error)
             }
