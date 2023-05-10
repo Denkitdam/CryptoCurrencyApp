@@ -20,6 +20,9 @@ final class CoinsListViewController: UITableViewController {
         guard let coinDetailsVC = segue.destination as? CoinDetailViewController else {
             return
         }
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        let coin = coins[indexPath.row]
+        coinDetailsVC.coin = coin
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         coins.count

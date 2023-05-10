@@ -100,6 +100,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hfj-9n-qXb"/>
+                    <connections>
+                        <outlet property="fullInfoLabel" destination="yDM-VW-CdN" id="5Xy-eC-8gf"/>
+                        <outlet property="logoIcon" destination="eld-Hf-kSc" id="WVl-ng-eZm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qe-Gc-nrA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
