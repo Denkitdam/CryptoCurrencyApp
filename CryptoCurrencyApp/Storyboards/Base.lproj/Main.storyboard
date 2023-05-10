@@ -12,36 +12,43 @@
         <scene sceneID="Dm9-qW-LQv">
             <objects>
                 <tableViewController id="rF3-7e-VNj" customClass="CoinsListViewController" customModule="CryptoCurrencyApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="QC7-PF-uVr">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="126" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="QC7-PF-uVr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <activityIndicatorView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="bpz-Dq-tWo">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </activityIndicatorView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cryptoCurrency" rowHeight="120" id="Dyf-qR-2eJ" customClass="CoinTableViewCell" customModule="CryptoCurrencyApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="94" width="393" height="120"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cryptoCurrency" rowHeight="125" id="Dyf-qR-2eJ" customClass="CoinTableViewCell" customModule="CryptoCurrencyApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dyf-qR-2eJ" id="8L0-33-XoF">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="120"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="125"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2eR-Mv-SMb">
-                                            <rect key="frame" x="20" y="0.0" width="118" height="145"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2eR-Mv-SMb">
+                                            <rect key="frame" x="5" y="0.0" width="132" height="120"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="132" id="0Pt-OJ-F0y"/>
+                                                <constraint firstAttribute="height" constant="120" id="QwB-2y-Lmo"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qry-Vy-u0A">
-                                            <rect key="frame" x="155" y="11" width="88" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qry-Vy-u0A">
+                                            <rect key="frame" x="153" y="10.999999999999998" width="204" height="20.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Qry-Vy-u0A" firstAttribute="top" secondItem="8L0-33-XoF" secondAttribute="topMargin" id="2Et-u2-XW6"/>
+                                        <constraint firstItem="2eR-Mv-SMb" firstAttribute="top" secondItem="8L0-33-XoF" secondAttribute="top" id="FfY-zH-pbZ"/>
+                                        <constraint firstItem="2eR-Mv-SMb" firstAttribute="leading" secondItem="8L0-33-XoF" secondAttribute="leading" constant="5" id="PTS-wQ-CkO"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Qry-Vy-u0A" secondAttribute="trailing" constant="16" id="y3Q-GT-apQ"/>
+                                        <constraint firstItem="Qry-Vy-u0A" firstAttribute="leading" secondItem="2eR-Mv-SMb" secondAttribute="trailing" constant="16" id="zo7-92-O45"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="coinIcon" destination="2eR-Mv-SMb" id="cFd-8J-sop"/>
+                                    <outlet property="shortInfo" destination="Qry-Vy-u0A" id="DoC-9w-tWU"/>
                                     <segue destination="qFL-dq-6Yw" kind="show" id="ZY8-KR-g9O"/>
                                 </connections>
                             </tableViewCell>

@@ -16,6 +16,25 @@ final class CoinsListViewController: UITableViewController {
         fetchCurrencies()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let coinDetailsVC = segue.destination as? CoinDetailViewController else {
+            return
+        }
+    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        coins.count
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cryptoCurrency")
+        guard let cell = cell as? CoinTableViewCell else { return UITableViewCell() }
+        let coin = coins[indexPath.row]
+        cell.configure(with: coin)
+        
+        
+        
+        return cell
+    }
+    
     private func fetchCurrencies() {
         let url = URL(string: "https://api.coinstats.app/public/v1/coins")!
         NetworkManager.shared.fetchCoins(with: url) { [weak self] result in
