@@ -8,26 +8,23 @@
 import UIKit
 
 final class CoinsListViewController: UITableViewController {
-
+    
+    private var coins: [CryptoCurrency] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchCurrency()
     }
-
+    
     private func fetchCurrency() {
         let url = URL(string: "https://api.coinstats.app/public/v1/coins")!
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data else {
-                print(error?.localizedDescription ?? "No Localised description")
-                return
-            }
-            do {
-                let decoder = JSONDecoder()
-                let coinList = try decoder.decode(CoinList.self, from: data)
-                print(coinList)
-            } catch {
+        NetworkManager.shared.fetchCoins(with: url) { [weak self] result in
+            switch result {
+            case .success(let coinList):
+                self?.coins = coinList
+            case .failure(let error):
                 print(error)
             }
-        }.resume()
+        }
     }
 }

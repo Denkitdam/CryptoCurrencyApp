@@ -17,7 +17,7 @@ class NetworkManager {
     
     private init() {}
     
-    func fetchCoins(with url: URL, completion: @escaping(Result<CoinList, NetworkError>) -> Void) {
+    func fetchCoins(with url: URL, completion: @escaping(Result<[CryptoCurrency], NetworkError>) -> Void) {
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data else {
                 completion(.failure(.noData))
@@ -27,7 +27,7 @@ class NetworkManager {
             do {
                 let decoder = JSONDecoder()
                 let coinList = try decoder.decode(CoinList.self, from: data)
-                completion(.success(coinList))
+                completion(.success(coinList.coins))
             } catch {
                 completion(.failure(.decodingError))
                 print(error)
