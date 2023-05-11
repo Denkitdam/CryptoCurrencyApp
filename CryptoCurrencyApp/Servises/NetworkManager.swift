@@ -27,7 +27,9 @@ final class NetworkManager {
             do {
                 let decoder = JSONDecoder()
                 let coinList = try decoder.decode(CoinList.self, from: data)
-                completion(.success(coinList.coins))
+                DispatchQueue.main.async {
+                    completion(.success(coinList.coins))
+                }
             } catch {
                 completion(.failure(.decodingError))
                 print(error)
