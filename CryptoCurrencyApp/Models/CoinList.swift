@@ -27,11 +27,12 @@ struct CryptoCurrency: Decodable {
     let priceChange1d: Double
     let priceChange1w: Double
     
+    
     var shortDescription: String {
         """
         Coin: \(symbol)
-        Price USD: \(price)
-        Volume: \(volume)
+        Price USD: \(String(format: "%.2f", price))
+        Day change: \(priceChange1d)
         """
     }
     var fullInfo: String {
