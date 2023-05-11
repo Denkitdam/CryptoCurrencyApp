@@ -34,7 +34,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qry-Vy-u0A">
                                             <rect key="frame" x="153" y="11.000000000000002" width="204" height="18.666666666666671"/>
                                             <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -46,7 +46,7 @@
                                         <constraint firstItem="Qry-Vy-u0A" firstAttribute="leading" secondItem="2eR-Mv-SMb" secondAttribute="trailing" constant="16" id="zo7-92-O45"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="coinIcon" destination="2eR-Mv-SMb" id="cFd-8J-sop"/>
                                     <outlet property="shortInfo" destination="Qry-Vy-u0A" id="DoC-9w-tWU"/>
@@ -83,12 +83,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EV-BZ-fKM">
                                 <rect key="frame" x="16" y="323" width="361" height="25.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gE5-l3-Uk4"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8F1-YR-5Mk" firstAttribute="centerX" secondItem="sY1-l2-ThJ" secondAttribute="centerX" id="CIt-XA-u10"/>
                             <constraint firstItem="4EV-BZ-fKM" firstAttribute="leading" secondItem="gE5-l3-Uk4" secondAttribute="leading" constant="16" id="NAt-xy-bKl"/>
