@@ -12,7 +12,7 @@ final class CoinDetailViewController: UIViewController {
     @IBOutlet var fullInfoLabel: UILabel!
     
     var coin: CryptoCurrency!
-    private let neetworkManager = NetworkManager.shared
+    private let networkManager = NetworkManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ final class CoinDetailViewController: UIViewController {
     private func configureDetails() {
         fullInfoLabel.text = coin.fullInfo
         
-        neetworkManager.fetchLogo(with: coin.icon) { [weak self] result in
+        networkManager.fetchLogo(with: coin.icon) { [weak self] result in
             switch result {
             case .success(let imageData):
                 self?.logoIcon.image = UIImage(data: imageData)
