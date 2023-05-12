@@ -13,7 +13,7 @@ struct CoinList: Decodable {
 
 struct CryptoCurrency: Decodable {
     let id: String
-    let icon: URL
+    let icon: String
     let name: String
     let symbol: String
     let rank: Double
@@ -50,5 +50,44 @@ struct CryptoCurrency: Decodable {
         Price change 1d: \(priceChange1d)
         Price change 1w: \(priceChange1w)
         """
+    }
+    
+    init(id: String, icon: String, name: String, symbol: String, rank: Double, price: Double, priceBtc: Double, volume: Double, marketCap: Double, availableSupply: Double, totalSupply: Double, priceChange1h: Double, priceChange1d: Double, priceChange1w: Double) {
+        self.id = id
+        self.icon = icon
+        self.name = name
+        self.symbol = symbol
+        self.rank = rank
+        self.price = price
+        self.priceBtc = priceBtc
+        self.volume = volume
+        self.marketCap = marketCap
+        self.availableSupply = availableSupply
+        self.totalSupply = totalSupply
+        self.priceChange1h = priceChange1h
+        self.priceChange1d = priceChange1d
+        self.priceChange1w = priceChange1w
+    }
+    
+    init(from coinData: [String: Any]) {
+        id = coinData["id"] as? String ?? ""
+        icon = coinData["icon"] as? String ?? ""
+        name = coinData["name"] as? String ?? ""
+        symbol = coinData["symbol"] as? String ?? ""
+        rank = coinData["rank"] as? Double ?? 0
+        price = coinData["price"] as? Double ?? 0
+        priceBtc = coinData["priceBtc"] as? Double ?? 0
+        volume = coinData["volume"] as? Double ?? 0
+        marketCap = coinData["marketCap"] as? Double ?? 0
+        availableSupply = coinData["availableSupply"] as? Double ?? 0
+        totalSupply = coinData["totalSupply"] as? Double ?? 0
+        priceChange1h = coinData["priceChange1h"] as? Double ?? 0
+        priceChange1d = coinData["priceChange1d"] as? Double ?? 0
+        priceChange1w = coinData["priceChange1w"] as? Double ?? 0
+    }
+    
+    static func getCoins(from value: Any) -> [CryptoCurrency] {
+        guard let coinData = value as? [String: Any] else { return [] }
+        return coinData.map { CryptoCurrency(from: $0) }
     }
 }

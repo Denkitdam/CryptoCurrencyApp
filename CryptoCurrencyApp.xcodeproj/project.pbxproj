@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C8B3026C2A0BDB0900E7AFF9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B3026B2A0BDB0900E7AFF9 /* NetworkManager.swift */; };
 		C8B3026F2A0BE91B00E7AFF9 /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B3026E2A0BE91B00E7AFF9 /* CoinTableViewCell.swift */; };
+		C8B302722A0E2FA500E7AFF9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C8B302712A0E2FA500E7AFF9 /* Alamofire */; };
 		C8D6F3E82A06F4C800164C57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D6F3E72A06F4C800164C57 /* AppDelegate.swift */; };
 		C8D6F3EA2A06F4C800164C57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D6F3E92A06F4C800164C57 /* SceneDelegate.swift */; };
 		C8D6F3EC2A06F4C800164C57 /* CoinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D6F3EB2A06F4C800164C57 /* CoinDetailViewController.swift */; };
@@ -30,7 +31,7 @@
 		C8D6F3F02A06F4C900164C57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8D6F3F32A06F4C900164C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8D6F3F52A06F4C900164C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8D6F3FE2A06F52E00164C57 /* CoinList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinList.swift; sourceTree = "<group>"; };
+		C8D6F3FE2A06F52E00164C57 /* CoinList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinList.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		C8D6F4012A06F72C00164C57 /* CoinsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8B302722A0E2FA500E7AFF9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = CryptoCurrencyApp;
+			packageProductDependencies = (
+				C8B302712A0E2FA500E7AFF9 /* Alamofire */,
+			);
 			productName = CryptoCurrencyApp;
 			productReference = C8D6F3E42A06F4C800164C57 /* CryptoCurrencyApp.app */;
 			productType = "com.apple.product-type.application";
@@ -171,6 +176,9 @@
 				Base,
 			);
 			mainGroup = C8D6F3DB2A06F4C800164C57;
+			packageReferences = (
+				C8B302702A0E2FA500E7AFF9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = C8D6F3E52A06F4C800164C57 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -428,6 +436,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C8B302702A0E2FA500E7AFF9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C8B302712A0E2FA500E7AFF9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8B302702A0E2FA500E7AFF9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C8D6F3DC2A06F4C800164C57 /* Project object */;
 }
