@@ -87,7 +87,7 @@ struct CryptoCurrency: Decodable {
     }
     
     static func getCoins(from value: Any) -> [CryptoCurrency] {
-        guard let coinData = value as? [String: Any] else { return [] }
+        guard let coinData = value as? [[String: Any]] else { return [] }
         return coinData.map { CryptoCurrency(from: $0) }
     }
 }
