@@ -19,6 +19,8 @@ final class CoinDetailViewController: UIViewController {
     }
     
     private func configureDetails() {
+        fullInfoLabel.text = coin.fullInfo
+        
         NetworkManager.shared.fetchImageData(form: coin.icon) { [weak self] result in
             switch result {
             case .success(let imageData):
