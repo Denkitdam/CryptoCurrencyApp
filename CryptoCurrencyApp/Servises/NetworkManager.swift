@@ -6,46 +6,36 @@
 //
 
 import Foundation
+import Alamofire
 
-enum NetworkError: Error {
-    case noData
-    case decodingError
-}
-
-final class NetworkManager {
-    static let shared = NetworkManager()
+final class NetworkManger {
+    static let shared = NetworkManger()
     
     private init() {}
     
-    func fetchCoins(with url: URL, completion: @escaping(Result<[CryptoCurrency], NetworkError>) -> Void) {
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data else {
-                completion(.failure(.noData))
-                print(error?.localizedDescription ?? "No Localised description")
-                return
-            }
-            do {
-                let decoder = JSONDecoder()
-                let coinList = try decoder.decode(CoinList.self, from: data)
-                DispatchQueue.main.async {
-                    completion(.success(coinList.coins))
+    func fetchCryptocurrency(from url: URL, completion: @escaping(Result<[CryptoCurrency], AFError>) -> Void) {
+        AF.request(url)
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    let coins = CryptoCurrency.getCoins(from: value)
+                    completion(.success(coins))
+                case .failure(let error):
+                    completion(.failure(error))
                 }
-            } catch {
-                completion(.failure(.decodingError))
-                print(error)
             }
-        }.resume()
     }
-    func fetchLogo(with url: URL, completion: @escaping(Result<Data, NetworkError>) -> Void) {
-        DispatchQueue.global().async {
-            guard let imageData = try? Data(contentsOf: url) else {
-                completion(.failure(.noData))
-                return
+    
+    func fetchImageData(form url: String, completion: @escaping(Result<Data, AFError>) -> Void) {
+        AF.request(url)
+            .validate().responseData { dataResponse in
+                switch dataResponse.result {
+                case .success(let data):
+                    completion(.success(data))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
             }
-            DispatchQueue.main.async {
-                completion(.success(imageData))
-            }
-                    
-        }
     }
 }
