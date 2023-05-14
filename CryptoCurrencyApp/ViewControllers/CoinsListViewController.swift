@@ -9,10 +9,15 @@ import UIKit
 
 final class CoinsListViewController: UITableViewController {
     
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
     private var coins: [CryptoCurrency] = []
+    private let networkManager = NetworkManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
         fetchCurrencies()
     }
     
@@ -40,13 +45,13 @@ final class CoinsListViewController: UITableViewController {
     
     private func fetchCurrencies() {
         let url = URL(string: "https://api.coinstats.app/public/v1/coins")!
-        NetworkManager.shared.fetchCoins(with: url) { [weak self] result in
+        networkManager.fetchCryptocurrency(from: url) { [weak self] result in
             switch result {
-            case .success(let coinList):
-                self?.coins = coinList
-                DispatchQueue.main.async {
-                    self?.tableView.reloadData()
-                }
+            case .success(let currencies):
+                print(currencies)
+                self?.coins = currencies
+                self?.activityIndicator.stopAnimating()
+                self?.tableView.reloadData()
             case .failure(let error):
                 print(error)
             }

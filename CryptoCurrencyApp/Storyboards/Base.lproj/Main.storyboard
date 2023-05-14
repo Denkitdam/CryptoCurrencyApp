@@ -16,9 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <activityIndicatorView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="CM7-zQ-cbX">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </activityIndicatorView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cryptoCurrency" rowHeight="125" id="Dyf-qR-2eJ" customClass="CoinTableViewCell" customModule="CryptoCurrencyApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="393" height="125"/>
+                                <rect key="frame" x="0.0" y="94" width="393" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dyf-qR-2eJ" id="8L0-33-XoF">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="125"/>
@@ -60,6 +64,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Crypto currencies" id="NCX-G5-GZh"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="CM7-zQ-cbX" id="WCX-Y5-86k"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQG-vV-6ub" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
