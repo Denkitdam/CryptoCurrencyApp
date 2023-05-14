@@ -10,6 +10,7 @@ import UIKit
 final class CoinsListViewController: UITableViewController {
     
     private var coins: [CryptoCurrency] = []
+    private let networkManager = NetworkManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,7 @@ final class CoinsListViewController: UITableViewController {
     
     private func fetchCurrencies() {
         let url = URL(string: "https://api.coinstats.app/public/v1/coins")!
-        NetworkManager.shared.fetchCryptocurrency(from: url) { result in
+        networkManager.fetchCryptocurrency(from: url) { result in
             switch result {
             case .success(let currencies):
                 print(currencies)
