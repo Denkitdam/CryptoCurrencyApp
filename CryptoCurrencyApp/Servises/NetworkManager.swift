@@ -19,8 +19,10 @@ final class NetworkManager {
             .responseJSON { dataResponse in
                 switch dataResponse.result {
                 case .success(let value):
-                    let coins = CryptoCurrency.getCoins(from: value)
-                    completion(.success(coins))
+                    print(value)
+                    let coinList = CoinList.getCoinList(From: value)
+                    let currencies = coinList.coins
+                    completion(.success(currencies))
                 case .failure(let error):
                     completion(.failure(error))
                 }
