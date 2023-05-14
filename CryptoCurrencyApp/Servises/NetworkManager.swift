@@ -13,16 +13,14 @@ final class NetworkManager {
     
     private init() {}
     
-    func fetchCryptocurrency(from url: URL, completion: @escaping(Result<[CryptoCurrency], AFError>) -> Void) {
+    func fetchCryptocurrency(from url: URL, completion: @escaping(Result<CoinList, AFError>) -> Void) {
         AF.request(url)
             .validate()
             .responseJSON { dataResponse in
                 switch dataResponse.result {
                 case .success(let value):
-                    print(value)
                     let coinList = CoinList.getCoinList(From: value)
-                    let currencies = coinList.coins
-                    completion(.success(currencies))
+                    completion(.success(coinList))
                 case .failure(let error):
                     completion(.failure(error))
                 }

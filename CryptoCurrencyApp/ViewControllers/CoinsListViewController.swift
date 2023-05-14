@@ -48,8 +48,8 @@ final class CoinsListViewController: UITableViewController {
         networkManager.fetchCryptocurrency(from: url) { [weak self] result in
             switch result {
             case .success(let currencies):
-                print(currencies)
-                self?.coins = currencies
+                let coins = currencies.coins
+                self?.coins = coins
                 self?.activityIndicator.stopAnimating()
                 self?.tableView.reloadData()
             case .failure(let error):
