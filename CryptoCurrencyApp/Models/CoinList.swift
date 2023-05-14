@@ -14,7 +14,7 @@ struct CoinList: Decodable {
         self.coins = coins
     }
     
-    init(from value: [String: Any]) {
+    init(from value: [String: [[String: Any]]]) {
         coins = value["coins"] as? [CryptoCurrency] ?? []
     }
     
