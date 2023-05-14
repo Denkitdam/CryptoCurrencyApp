@@ -40,10 +40,10 @@ final class CoinsListViewController: UITableViewController {
     
     private func fetchCurrencies() {
         let url = URL(string: "https://api.coinstats.app/public/v1/coins")!
-        NetworkManager.shared.fetchCryptocurrency(from: url) { [weak self] result in
+        NetworkManager.shared.fetchCryptocurrency(from: url) { result in
             switch result {
             case .success(let currencies):
-                self?.coins = currencies
+                print(currencies)
             case .failure(let error):
                 print(error)
             }
