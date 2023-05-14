@@ -11,6 +11,7 @@ final class CoinTableViewCell: UITableViewCell {
     @IBOutlet var coinIcon: UIImageView!
     @IBOutlet var shortInfo: UILabel!
     
+    private let networkManager = NetworkManager.shared
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,7 +23,7 @@ final class CoinTableViewCell: UITableViewCell {
     
     func configure(with cryptoCurrency: CryptoCurrency) {
         shortInfo.text = cryptoCurrency.shortDescription
-        NetworkManager.shared.fetchImageData(form: cryptoCurrency.icon) { [weak self] result in
+        networkManager.fetchImageData(form: cryptoCurrency.icon) { [weak self] result in
             switch result {
             case .success(let imageData):
                 self?.coinIcon.image = UIImage(data: imageData)

@@ -9,6 +9,8 @@ import UIKit
 
 final class CoinsListViewController: UITableViewController {
     
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
     private var coins: [CryptoCurrency] = []
     private let networkManager = NetworkManager.shared
     
