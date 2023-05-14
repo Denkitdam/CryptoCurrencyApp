@@ -16,6 +16,8 @@ final class CoinsListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.startAnimating()
         fetchCurrencies()
     }
     
